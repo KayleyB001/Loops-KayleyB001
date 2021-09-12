@@ -52,6 +52,11 @@ namespace LoopsExercises
             Console.WriteLine("PRINT NUMBERS IN REVERSE ORDER\n");
 
             // Enter your solution here
+            Console.WriteLine();
+            for (int i = 5; i > 0; i--)
+
+
+                Console.WriteLine(i);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -66,7 +71,28 @@ namespace LoopsExercises
             Console.Clear();
             Console.WriteLine("REVERSE COUNTING\n");
 
+
             // Enter your solution here
+            Console.WriteLine("Enter a number between 1-20");
+
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            int[] Numbers = new int[21] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+            Console.WriteLine("--");
+
+            if (userInput < 1 || userInput > 20)
+            {
+                Console.WriteLine("Number is out of bounds");
+            }
+            else
+            {
+                for (int i = userInput; i >= 0; i--)
+                {
+                   
+                    Console.WriteLine(Numbers[i]);
+                }
+
+            }
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -81,6 +107,19 @@ namespace LoopsExercises
 
             // Enter your solution here
 
+            Console.WriteLine();
+            for (int i = 0; i < 10; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+
+                }
+                else
+                {
+                    Console.WriteLine((i * i));
+                }
+            }
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -95,12 +134,40 @@ namespace LoopsExercises
             Console.Clear();
             Console.WriteLine("GUESS THE MAGIC NUMBER\n");
 
-            int userInput = Convert.ToInt32(Console.ReadLine()); // This reads the user's input and converts it to an integer. We'll assume that users can only input integers.
+            // This reads the user's input and converts it to an integer.
+            // We'll assume that users can only input integers.
             // Enter your solution here
 
-            Console.Write("Press enter to return to the Main Menu");
-            Console.ReadLine();
-        }
 
+            Console.WriteLine("Enter a number");
+
+            bool uWon = false;
+
+            while (uWon == false)
+            {
+                int userInput = Convert.ToInt32(Console.ReadLine());
+                if (userInput % 3 == 0)
+                {
+
+                    Console.WriteLine("You won");
+                    uWon = true;
+                    Console.Write("Press enter to return to the Main Menu");
+                    Console.ReadLine();
+
+                }
+                else
+                {
+                    Console.WriteLine("Try again");
+                }
+
+
+
+
+                
+                
+               
+            }
+
+        }
     }
 }
